@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def food_items_view(request):
     items = fooditem.objects.all()
-    return render(request, 'home.html', {'items': items})
+    return render(request, 'index.html', {'items': items})
 
 
 def landingpage(request):
@@ -17,7 +17,7 @@ def landingpage(request):
 @login_required
 def home(request):
     items = fooditem.objects.all()
-    return render(request, 'home.html',{'items':items})
+    return render(request, 'index.html',{'items':items})
 def signup_page(request):
     if request.method == 'POST':
         username = request.POST['username']
