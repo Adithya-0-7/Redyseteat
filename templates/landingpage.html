@@ -1,0 +1,95 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'landingpage.css' %}">
+
+  </head>
+  <body>
+<div class="background">
+   <div class="navbar">
+    <h1 class="navbar-title">Ready Set Eat</h1>
+{% csrf_token %}
+{% if user.is_authenticated %}
+  <p class="para">Welcome, {{  user.username }}</p>
+  <p class="para"><a href="{% url 'logout' %}">Logout</a></p>
+{% else %}
+  <p class="para"><a href="{% url 'login' %}">Login</a></p>
+  <p class="para"><a href="{% url 'signup' %}">Signup</a></p>
+ 
+{% endif %}
+   </div> 
+   <div class="content">
+    <h2>Delicious Foods </h2>
+   </div>
+   <div class="landing_para">
+    <p>Savor every bite with our freshly prepared dishes, 
+      crafted from the finest ingredients and bursting with flavor.
+       Whether you’re craving comfort food or something new,
+       we bring delicious moments straight to your plate.<br><br>
+        <button class="explore-button" type="submit"><a href="{% url 'signup' %}">Explore More</a></button>
+    </p>
+     </div>
+    </div>
+
+     <div class="image-container">
+    <h2> Order our best food options </h2>
+            <div class="food-options">
+                <div class="img-hover"> 
+                    <a href="{% url 'home' %}"><img src="https://th.bing.com/th/id/OIP.7M4s9JRFScRS6ArbZaVqiAHaFj?w=233&h=180&c=7&r=0&o=7&pid=1.7&rm=3"></a>
+                    <p>Biryani</p>
+                </div>
+                 <div class="img-hover">
+                    <a href="{% url 'login' %}"><img src="https://www.bing.com/th?id=OPAC.q9KikKcIVgbIQQ474C474&o=5&pid=21.1&w=140&h=140&rs=1&qlt=100&dpr=0.8&o=2&c=8&pcl=f5f5f5"></a>
+                    <p>Cake</p>
+                </div>
+                 <div class="img-hover">
+                   <a href="{% url 'login' %}"><img src="https://supercurioso.com/wp-content/uploads/2023/04/persona-recibiendo-un-pedazo-de-pizza-de-pepperoni-con-queso.jpg_s1024x1024wisk20cokpgZ7WhSGy-697KHu_dT5N8dfYatJ7VWHouPzGmGBs.jpg" ></a>
+                    <p>Pizza</p>
+                </div>
+                 <div class="img-hover">
+                    <a href="{% url 'login' %}"><img src="https://th.bing.com/th/id/OIP.NyTWHuB1hxeFLThmmg1XjQHaE8?w=286&h=191&c=7&r=0&o=7&pid=1.7&rm=3"></a>
+                    <p>Burger</p>
+                </div>
+                 <div class="img-hover">
+                    <a href="{% url 'login' %}"><img src="https://th.bing.com/th/id/OIP._OW7V9UOXUTiSXENdWGzmgHaE8?w=276&h=184&c=7&r=0&o=7&pid=1.7&rm=3"></a>
+                    <p>Tea</p>
+                </div>
+                <div class="img-hover">
+                    <a href="{% url 'login' %}"><img src="https://th.bing.com/th/id/OIP.oCWedx_QlZZFmNSCGtSeiQHaFj?w=238&h=180&c=7&r=0&o=7&pid=1.7&rm=3"></a>
+                    <p>Vada</p>
+                </div>
+                 <div class="img-hover">
+                    <a href="{% url 'login' %}"><img src="https://th.bing.com/th/id/OIP.LKVl642NaCrtZYzd0Qy0WQHaEK?w=288&h=150&c=6&o=7&pid=1.7&rm=3"></a>
+                    <p>Parota</p>
+                </div>
+                 <div class="img-hover">
+                   <a href="{% url 'login' %}"><img src="https://tse1.mm.bing.net/th/id/OIP.I2k1BsJ8NbG4cCS_jbRPbgHaHa?w=1024&h=1024&rs=1&pid=ImgDetMain&o=7&rm=3" ></a>
+                    <p>Salad</p>
+                </div>
+                 <div class="img-hover">
+                    <a href="{% url 'login' %}"><img src="https://static.vecteezy.com/system/resources/thumbnails/037/337/776/small_2x/ai-generated-a-beautiful-image-for-a-protein-shake-ad-with-plenty-of-free-space-for-text-free-photo.jpeg"></a>
+                    <p>Shake</p>
+                </div>
+                 <div class="img-hover">
+                    <a href="{% url 'login' %}"><img src="https://wallpapers.com/images/hd/ice-cream-pictures-93ucnuf5kr7ghmhg.jpg"></a>
+                    <p>Ice cream</p>
+                </div>
+            </div>
+          </div>
+  <div>
+  <footer>
+    <p>© 2024 Ready Set Eat. All rights reserved.</p>
+    <p>Contact us: Readyseteat@gmail.com</p>
+
+
+  </footer>
+</div>
+      
+ 
+  </body>
+</html>

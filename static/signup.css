@@ -1,0 +1,72 @@
+.navbar{
+  width: 100%;
+  height:50px;
+ padding-top: 20px;
+ padding-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content:right;
+  gap: 10px;
+}
+.navbar-title{
+  margin-right: auto;
+  margin-left: 30px;
+  font-style: normal;
+  color:white;
+}
+ a{
+  color: white;
+ font-weight: bolder;
+  font-size: 25px;
+  text-decoration: none;
+
+}
+body{
+ 
+  background-image: url("https://wallpaperaccess.com/full/1727398.jpg");
+ background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.para{
+  margin-right: 10px;
+  font-size: large;
+}
+p{
+  margin-left: 10px;
+  font-size: large;
+  font-style: none;
+ 
+}
+
+.signup_content{
+  
+  background-color:  #ecdbcc;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 100px;
+}
+input{
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.signup-button{
+  width: 95%;
+  height: 40px;
+  cursor: pointer;
+  background-color: #f1bf8e;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.signup-button:hover{
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #f3d2b2;
+}
